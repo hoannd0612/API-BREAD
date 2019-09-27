@@ -3,7 +3,6 @@ package hungdt.ApiBread.controller;
 import hungdt.ApiBread.entity.ProductEntity;
 import hungdt.ApiBread.exception.ExceptionMessage;
 import hungdt.ApiBread.service.ProductService;
-import oracle.jrockit.jfr.openmbean.ProducerDescriptorType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
