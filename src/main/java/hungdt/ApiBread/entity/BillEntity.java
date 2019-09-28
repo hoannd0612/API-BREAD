@@ -5,22 +5,20 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Order")
-public class OrderEntity {
+@Table(name = "bill")
+public class BillEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name = "date_order")
-    private Timestamp dateOrder;
-    @Column(name = "total_price")
-    private double totalPrice;
+    @Column(name = "sum_price")
+    private int sumPrice;
     @Column(name = "user_id")
-    private String user_id;
-    @Column(name = "is_delete")
-    private boolean isDelete;
+    private int userId;
+    @Column(name = "deleted")
+    private int deleted;
 }

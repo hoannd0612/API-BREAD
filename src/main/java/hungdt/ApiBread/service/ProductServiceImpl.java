@@ -11,31 +11,14 @@ import java.util.List;
 public class ProductServiceImpl implements ProductService {
     private final ProductRepository productRepository;
 
+    @Autowired
     public ProductServiceImpl(ProductRepository productRepository) {
         this.productRepository = productRepository;
     }
 
-    @Autowired
-
-
 
     @Override
-    public List<ProductEntity> loadAllProduct() {
+    public List<ProductEntity> loadAll() {
         return productRepository.findAll();
-    }
-
-    @Override
-    public ProductEntity findByID(int id) {
-        return productRepository.findById(id);
-    }
-
-    @Override
-    public ProductEntity createProduct(ProductEntity productEntity) {
-        return productRepository.save(productEntity);
-    }
-
-    @Override
-    public void deleteByID(int id) {
-        productRepository.deleteById(id);
     }
 }

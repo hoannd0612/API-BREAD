@@ -8,8 +8,6 @@ import java.util.List;
 
 @Repository
 public interface ProductRepository extends JpaRepository<ProductEntity,Integer> {
+        List<ProductEntity> findAll();
 
-    List<ProductEntity> findAll();
-    ProductEntity findById(int id);
-    void deleteById(int id);
 }

@@ -10,20 +10,14 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "users")
-public class UsersEntity {
+@Table(name = "productType")
+public class ProductTypeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private  int id;
 
-    @Column(name = "username")
-    private String username;
-    @Column(name = "password")
-    private String password;
-    @Column(name = "role")
-    private Integer role;
-    @Column(name = "name")
-    private String name;
+    @Column(name = "type_name")
+    private String typeName;
     @Column(name = "deleted")
     private Integer deleted;
 }

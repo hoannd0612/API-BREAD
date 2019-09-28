@@ -5,20 +5,28 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Product")
+@Table(name = "product")
 public class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-    @Column(name = "name")
-    private String name;
-    @Column(name = "entry_price")
-    private double entryPrice;
-    @Column(name = "is_delete")
-    private boolean isDelete;
+    private  int id;
+
+    @Column(name = "product_name")
+    private String productName;
+
+    @Column(name = "type_id")
+    private Integer typeId;
+
+    @Column(name = "price")
+    private Double price;
+
+    @Column(name = "image")
+    private String image;
+
+    @Column(name = "deleted")
+    private Integer deleted;
 }
