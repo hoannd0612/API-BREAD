@@ -21,4 +21,14 @@ public class ProductServiceImpl implements ProductService {
     public List<ProductEntity> loadAll() {
         return productRepository.findAll();
     }
+
+    @Override
+    public ProductEntity findByID(int id) {
+        return productRepository.findById(id);
+    }
+
+    @Override
+    public void deleteByID(int id) {
+        productRepository.deleteById(id);
+    }
 }

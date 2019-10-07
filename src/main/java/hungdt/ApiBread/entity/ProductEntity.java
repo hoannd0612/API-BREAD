@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -13,13 +15,10 @@ import javax.persistence.*;
 public class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private  int id;
+    private int id;
 
     @Column(name = "product_name")
     private String productName;
-
-    @Column(name = "type_id")
-    private Integer typeId;
 
     @Column(name = "price")
     private Double price;
@@ -29,4 +28,6 @@ public class ProductEntity {
 
     @Column(name = "deleted")
     private Integer deleted;
+    @Transient
+    private List<ProductEntity> productEntityList;
 }

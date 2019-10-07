@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -21,4 +22,6 @@ public class BillEntity {
     private int userId;
     @Column(name = "deleted")
     private int deleted;
+    @Transient
+    private List<DetailBillEntity> detailBillEntityList;
 }
